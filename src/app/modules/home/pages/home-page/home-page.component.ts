@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as dataMoviesRaw from '../../../../data/movies.json'
-import * as dataSeriesRaw from '../../../../data/movies.json'
+import * as dataSeriesRaw from '../../../../data/series.json'
 import { MovieModel } from '@core/movies.model';
 import { SerieModel } from '@core/series.model';
 

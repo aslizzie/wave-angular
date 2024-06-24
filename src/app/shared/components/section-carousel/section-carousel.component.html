@@ -1,0 +1,17 @@
+<div class="container my-5">
+    <h4 class="mb-1">&nbsp;</h4>
+    <h4>&nbsp;</h4>
+
+    <h4 class="mb-3">{{title }}</h4>
+
+    <div class="trend-carousel">
+        <div *ngFor="let movie of dataMovies" class="carousel-cell position-relative">
+            <app-card-carousel></app-card-carousel>
+            <!-- <div class="carousel-cell">
+                <div class="opacity-carousel"></div>
+                <a href="">
+                    <img src="/img/movie-4.jpg" alt="" srcset="">
+                </a>
+            </div> -->
+        </div>
+    </div>

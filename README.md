@@ -1,27 +1,62 @@
-# WaveAngular
+### Hub de entretenimiento - WAVE (con Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+#### Diana Lizeth Alcala Sandoval
 
-## Development server
+En mi proyecto, creé un hub de entretenimiento al cual llamé "WAVE" que cuenta con un catálogo de películas y series (actualmente con información hardcodeada), que permite a los usuarios agregar películas a sus favoritos y acceder a detalles completos de cada película.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+##### Requerimientos técnicos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para la migración del proyecto, utilicé Angular en su versión 12, también hice uso de Bootstrap y CSS puro para los estilos del proyecto.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+##### Uso del proyecto
 
-## Running unit tests
+Para poder hacer uso del proyecto, es necesario tener instalado NodeJs y Angular (en este caso, la versión 12).
+Primero se debe de instalar NodeJs, para instalarlo se puede hacer desde la terminal o bien con un instalador. Como mencioné anteriormente, el proyecto lo desarrollé con Angular 12 por lo tanto debemos instalar NodeJs en su versión 14 o una versión menor a la 16, en mi caso instalé la versión 14.17.6, a continuación adjunto el enlace directo para descargarlo: [NodeJs 14.17.6](https://nodejs.org/en/blog/release/v14.17.6).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+NodeJs también nos instalará NPM, como manejador de paquetes, en este caso la versión requerida es la 6.
 
-## Running end-to-end tests
+Después de tener instalado lo anterior, podemos instalar Angular, para esto hay que abrir una terminal y ejecutamos el siguiente comando:
+`npm install -g @angular/cli@12`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Luego de esto, y después de haber clonado mediante la terminal el proyecto en nuestro local con el comando:
+`git clone https://github.com/aslizzie/wave-angular.git`
 
-## Further help
+De nuevo haciendo uso de la terminal, nos colocamos en la carpeta del proyecto y ejecutamos el siguiente comando:
+`npm install`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Este comando descargará las dependencias o librerias necesarias para el proyecto, despues que la descarga este completa ejecutamos el siguiente comando para correr el proyecto:
+`ng serve`
+
+---
+
+##### Proyecto
+
+A continuación, se muestran capturas de pantalla del proyecto y una breve explicación de lo que se presenta en cada captura.
+
+###### Vista - Movies
+
+![Markdown logo](/src/documentation/movies.png)
+En esta captura se muestra la vista con el listado de películas.
+
+###### Vista - Series
+
+![Markdown logo](/src/documentation/series.png)
+En esta captura se muestra la vista con el listado de series.
+
+---
+
+##### Proceso para realizar el proyecto
+
+Para llevar a cabo la migración del proyecto estuve leyendo documentación y viendo videos sobre Angular porque ya que no tenía ningún conocimiento sobre como usarlo, mientras que a la par realizaba la migración.
+
+---
+
+##### Sprint review
+
+| ¿Qué salió bien?                                                                                                                                                                     | ¿Qué puedo hacer diferente?                                                                                           | ¿Qué no salió bien?                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Lo que considero que salió bien fue que pude hacer que la información sobre las películas o las series se manejara en un JSON y no estuviera hardcodeada como en el sprint anterior. | Lo que considero que podría hacer diferente es seguir leyendo documentación para continuar aprendiendo sobre Angular. | En general, creo que en este sprint no todo salió bien ya que al nunca haber manejado un framework de este tipo se me dificultó muchísimo el hacer la migración lo que llevo a que no pude desarrollar las funcionalidades esperadas para este sprint. |
