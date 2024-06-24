@@ -1,0 +1,49 @@
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <div class="d-none d-sm-flex col-sm-4 col-md-6 col-lg-8 col-xl-9 col-xxl-10">
+            <div class="div-login position-relative m-5">
+                <img class="logo-login position-absolute bottom-0 start-0 d-none d-md-flex m-5" src="" alt="wave">
+            </div>
+        </div>
+
+        <div
+            class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-2 ps-sm-0 p-5 d-flex flex-column justify-content-center">
+            <h4 class="text-center mb-5">Inicia sesión</h4>
+
+            <div>
+                <form (ngSubmit)="onSubmit()" class="mb-0">
+                    <label for="email" class="form-label mb-1">Usuario o correo electrónico</label>
+                    <input type="email" class="form-control mb-3" id="email" name="email" required>
+
+                    <label for="password" class="form-label mb-1">Contraseña</label>
+                    <input type="password" class="form-control mb-3" id="password" name="password" required>
+
+                    <div class="mb-5 d-flex justify-content-between flex-wrap">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="rememberMe"
+                                checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Recuérdame
+                            </label>
+                        </div>
+
+                        <a href="#"> ¿Olvidaste tu contraseña? </a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
+                </form>
+            </div>
+
+            <hr class="my-5">
+
+            <button type="button" class="btn btn-outline-secondary w-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z" />
+                </svg>
+                Iniciar sesión con Google
+            </button>
+        </div>
+    </div>
+</div>

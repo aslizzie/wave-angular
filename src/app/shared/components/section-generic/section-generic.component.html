@@ -1,0 +1,21 @@
+<div>
+    <h4 class="mb-3 mt-5">{{ title }}</h4>
+
+    <ng-container *ngIf="dataMovies && dataMovies.length > 0">
+        <div
+            class=" my-5 d-flex flex-wrap justify-content-center justify-content-md-between row-gap-4 column-gap-4 column-gap-md-0">
+            <div *ngFor="let movie of dataMovies" class="carousel-cell position-relative">
+                <app-card [movie]="movie"></app-card>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="dataSeries && dataSeries.length > 0">
+        <div
+            class=" my-5 d-flex flex-wrap justify-content-center justify-content-md-between row-gap-4 column-gap-4 column-gap-md-0">
+            <div *ngFor="let serie of dataSeries" class="carousel-cell position-relative">
+                <app-card [serie]="serie"></app-card>
+            </div>
+        </div>
+    </ng-container>
+</div>

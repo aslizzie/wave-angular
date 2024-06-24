@@ -1,0 +1,14 @@
+<app-side-bar (sidebarCollapsed)="onSidebarCollapsed($event)"></app-side-bar>
+<app-nav-bar></app-nav-bar>
+
+<div class="home-wrapper" [ngClass]="{'collapsed': isSidebarCollapsed, 'expanded': !isSidebarCollapsed}">
+    <router-outlet name="child"></router-outlet>
+
+    <div class="series-page container">
+        <app-section-generic [title]="'Movies'" [dataMovies]="mockMoviesList"></app-section-generic>
+    </div>
+
+    <div class="series-page container">
+        <app-section-generic [title]="'Series'" [dataSeries]="mockSeriesList"></app-section-generic>
+    </div>
+</div>
