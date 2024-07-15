@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as dataRaw from '../../../../data/series.json'
-import { SerieModel } from '@core/series.model';
+import * as dataRaw from '../../../../data/series.json';
+import { SerieModel } from '@core/models/series';
 
 @Component({
   selector: 'app-series-page',
@@ -9,13 +9,10 @@ import { SerieModel } from '@core/series.model';
 })
 export class SeriesPageComponent implements OnInit {
   mockSeriesList:Array<SerieModel> = []
-
-  constructor() { 
-    const {data}:any = (dataRaw as any).default;
-    this.mockSeriesList = data;
-  }
+  constructor() { }
 
   ngOnInit(): void {
+    const {data}:any = (dataRaw as any).default
+    this.mockSeriesList = data;
   }
-
 }

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MovieModel } from '@core/movies.model';
-import { SerieModel } from '@core/series.model';
+import { MovieModel } from '@core/models/movies';
+import { SerieModel } from '@core/models/series';
 
 @Component({
   selector: 'app-section-generic',
@@ -9,9 +9,7 @@ import { SerieModel } from '@core/series.model';
 })
 export class SectionGenericComponent implements OnInit {
   @Input() title: string = ''
-  @Input() dataMovies: Array<MovieModel> = []
-  @Input() dataSeries: Array<SerieModel> = []
-
+  @Input() dataItems: Array<MovieModel> | Array<SerieModel> = [];
   constructor() { }
 
   ngOnInit(): void {

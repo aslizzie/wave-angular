@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { CardComponent } from './components/card/card.component';
 import { SectionGenericComponent } from './components/section-generic/section-generic.component';
-import { SectionCarouselComponent } from './components/section-carousel/section-carousel.component';
-import { CardCarouselComponent } from './components/card-carousel/card-carousel.component';
+import { CardComponent } from './components/card/card.component';
+import { RouterModule } from '@angular/router';
+import { ImgBrokenDirective } from './directives/img-broken.directive';
 
 
 
@@ -13,21 +13,20 @@ import { CardCarouselComponent } from './components/card-carousel/card-carousel.
   declarations: [
     SideBarComponent,
     NavBarComponent,
-    CardComponent,
     SectionGenericComponent,
-    SectionCarouselComponent,
-    CardCarouselComponent
+    CardComponent,
+    ImgBrokenDirective
   ],
   imports: [
-    CommonModule
-  ], 
+    CommonModule,
+    RouterModule
+  ],
   exports: [
     SideBarComponent,
     NavBarComponent,
     CardComponent,
     SectionGenericComponent,
-    SectionCarouselComponent,
-    CardCarouselComponent
+    ImgBrokenDirective
   ]
 })
 export class SharedModule { }

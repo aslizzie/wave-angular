@@ -4,10 +4,6 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
   {
-    path: 'welcome',
-    loadChildren:() => import('@modules/welcome/welcome.module').then(m => m.WelcomeModule)
-  },
-  {
     path: 'movies',
     loadChildren:() => import('@modules/movies/movies.module').then(m => m.MoviesModule)
   },
@@ -18,6 +14,10 @@ const routes: Routes = [
   {
     path: 'favorites',
     loadChildren:() => import('@modules/favorites/favorites.module').then(m => m.FavoritesModule)
+  },
+  {
+    path: '**',
+    redirectTo: '/movies'
   }
 ];
 

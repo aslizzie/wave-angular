@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,24 +6,31 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
-  isCollapsed = false;
-  headerToggleImgSrc = '../../../../assets/logos/small-logo.png';
-
-  @Output() sidebarCollapsed: EventEmitter<boolean> = new EventEmitter<boolean>();
-
-  toggleSidebar() {
-    this.isCollapsed = !this.isCollapsed;
-    if (!this.isCollapsed) {
-      this.headerToggleImgSrc = '../../../../assets/logos/small-logo.png';
-    } else {
-      this.headerToggleImgSrc = '../../../../assets/logos/big-logo.png';
-    }
-
-    this.sidebarCollapsed.emit(!this.isCollapsed);
-  }
+  mainMenu: Array<any> = []
 
   constructor() { }
 
   ngOnInit(): void {
+    this.mainMenu = [
+      {
+        name: 'Home',
+        icon: 'bi bi-house-door-fill',
+        router: ['/'],
+        options: ''
+      },
+      {
+        name: 'Categories',
+        icon: 'bi bi-grid-fill',
+        router: [''],
+        options: ['Acción', 'Ciencia ficcion', 'Comedia', 'Drama', 'Musical']
+      },
+      {
+        name: 'Favorites',
+        icon: 'bi bi-suit-heart-fill',
+        router: ['/', 'favorites'],
+        options: ''
+      }
+    ]
   }
+
 }

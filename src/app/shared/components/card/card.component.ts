@@ -1,7 +1,6 @@
-import { flatten } from '@angular/compiler';
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { MovieModel } from '@core/movies.model';
-import { SerieModel } from '@core/series.model';
+import { Component, Input, OnInit } from '@angular/core';
+import { MovieModel } from '@core/models/movies';
+import { SerieModel } from '@core/models/series';
 
 @Component({
   selector: 'app-card',
@@ -9,34 +8,15 @@ import { SerieModel } from '@core/series.model';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input() movie: MovieModel = {
-      _id: '',
-      name: '',
-      description: '',
-      duration: 0,
-      cover_carrousel: '',
-      cover_card: '',
-      url: '',
-      classification: '',
-      favorite: false
-  };
-
-  @Input() serie: SerieModel = {
+  @Input() item: MovieModel | SerieModel = {
     _id: '',
     name: '',
     description: '',
-    cover_carrousel: '',
     cover_card: '',
+    cover_carrousel: '',
     url: '',
-    favorite: false
-};
-
-  @Output() viewDetails = new EventEmitter<string>();
-
-  goToMovieDetails(id: string): void {
-    this.viewDetails.emit(id);
-  }
-
+    classification: ''
+  };
   constructor() { }
 
   ngOnInit(): void {
